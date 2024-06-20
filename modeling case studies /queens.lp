@@ -1,12 +1,12 @@
 
-row(1..n).
-col(1..n).
+row(1..4).
+col(1..4).
 
 {queen(I,J): row(I), col(J)}. 
 
 % vertical restriction  = n
 
-:- {queen(I,J)} != n. 
+:- {queen(I,J)} != 4. 
 
 % vertical & horizonal restriction 
 
