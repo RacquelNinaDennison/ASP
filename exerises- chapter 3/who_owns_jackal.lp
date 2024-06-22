@@ -12,12 +12,9 @@ pets(iguana; jackal; cobra;llama).
  X1 = X2 :- owns_pet(P,X1), owns_pet(P,X2).
 
 % abners full name is not foster or engels 
- :- full_name(abner,foster).
- :- full_name(abner,engels).
- :- owns_pet(iguana,chuck)
- :- owns_pet(iguana,duane).
- :- owns_pet(jackal,X), full_name(X,foster).
- :- owns_pet(cobra,X), full_name(X,foster).
+ :- full_name(abner,foster), full_name(abner,engels).
+ :- owns_pet(iguana,chuck; iguana,duane).
+ :- owns_pet(jackal,X ; cobra,X), full_name(X,foster).
  :- owns_pet(llama, duane).
  :- owns_pet(cobra,abner).
  :- full_name(duana,engels).
